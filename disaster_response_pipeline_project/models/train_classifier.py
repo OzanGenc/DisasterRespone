@@ -49,13 +49,12 @@ def build_model():
     ('clf', MultiOutputClassifier(RandomForestClassifier())) 
     ])
 
-    #X_train, X_test, y_train, y_test = train_test_split(X, Y)
-
-    parameters = {'clf__estimator__max_depth':[None], 'clf__estimator__n_estimators':[2, 4]}
+    parameters = {'clf__estimator__max_depth':[None, 4], 
+    'clf__estimator__n_estimators':[100],
+    'clf__estimator__max_features':['auto', 'sqrt', 'log2']
+    }
 
     cv = GridSearchCV(pipeline, param_grid=parameters)
-
-    #cv.fit(X_train, y_train)
 
     return cv
 
