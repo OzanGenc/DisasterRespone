@@ -44,8 +44,7 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
-    #Message categories
-    sums = df.sum()[3:].sort_values(ascending=False)
+    sums = df.iloc[:,4:].sum().sort_values(ascending=False)
     category_names = list(sums.index)
 
     # create visuals
@@ -70,6 +69,7 @@ def index():
             }
         },
 
+
         {
             'data': [
                 Bar(
@@ -88,7 +88,7 @@ def index():
                 }
             }
         }
-        
+
     ]
     
     # encode plotly graphs in JSON
