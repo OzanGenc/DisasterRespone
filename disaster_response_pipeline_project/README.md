@@ -9,40 +9,40 @@ Multiple outputs to predict are;
 
          related
          request
-2                      offer
-3                aid_related
-4               medical_help
-5           medical_products
-6          search_and_rescue
-7                   security
-8                   military
-9                child_alone
-10                     water
-11                      food
-12                   shelter
-13                  clothing
-14                     money
-15            missing_people
-16                  refugees
-17                     death
-18                 other_aid
-19    infrastructure_related
-20                 transport
-21                 buildings
-22               electricity
-23                     tools
-24                 hospitals
-25                     shops
-26               aid_centers
-27      other_infrastructure
-28           weather_related
-29                    floods
-30                     storm
-31                      fire
-32                earthquake
-33                      cold
-34             other_weather
-35             direct_report
+                     offer
+              aid_related
+               medical_help
+           medical_products
+          search_and_rescue
+                   security
+                   military
+                child_alone
+                     water
+                      food
+                   shelter
+                  clothing
+                     money
+            missing_people
+                  refugees
+                     death
+                 other_aid
+    infrastructure_related
+                 transport
+                 buildings
+               electricity
+                     tools
+                 hospitals
+                     shops
+               aid_centers
+      other_infrastructure
+           weather_related
+                    floods
+                     storm
+                      fire
+                earthquake
+                      cold
+             other_weather
+             direct_report
 
 
 
