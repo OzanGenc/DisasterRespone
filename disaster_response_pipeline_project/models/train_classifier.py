@@ -15,7 +15,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline, FeatureUnion
-from sklearn.metrics import classification_report
+from sklearn.metrics import classification_report, accuracy_score
 
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 
@@ -64,7 +64,9 @@ def evaluate_model(model, X_test, Y_test):
     y_pred = pd.DataFrame(y_pred, columns=Y_test.columns, index=Y_test.index)
 
     for col in Y_test.columns:
+        print('Performance results for classifying ', col)
         print(classification_report(Y_test[col], y_pred[col], labels=Y_test[col].unique()))
+        print('Accuracy : %.2f' %(accuracy_score(Y_test[col], y_pred[col])))
 
 
 def save_model(model, model_filepath):
