@@ -46,20 +46,6 @@ def index():
     
 
 
-    # Show distribution of different category
-    category = list(df.columns[4:])
-    category_counts = []
-    for column_name in category:
-        category_counts.append(np.sum(df[column_name]))
-
-    # extract data exclude related
-    categories = df.iloc[:,4:]
-    categories_mean = categories.mean().sort_values(ascending=False)[1:11]
-    categories_names = list(categories_mean.index)
-
-
-
-
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -81,25 +67,7 @@ def index():
                 }
             }
         }
-        ,
-        {
-            'data': [
-                Bar(
-                    x=category,
-                    y=category_counts
-                )
-            ],
-
-            'layout': {
-                'title': 'Distribution of Message Categories',
-                'yaxis': {
-                    'title': "Count"
-                },
-                'xaxis': {
-                    'title': "Category"
-                }
-            }
-        }
+        
     ]
     
     # encode plotly graphs in JSON
