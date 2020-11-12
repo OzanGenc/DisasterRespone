@@ -7,8 +7,8 @@ Messages were vectorized by applying TF-IDF. Multioutput RandomForestClassifier 
 
 Multiple outputs to predict are;
 
-         related
-         request
+                  related
+                  request
                      offer
               aid_related
                medical_help
